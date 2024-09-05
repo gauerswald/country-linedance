@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuen Linedance hinzufügen</title>
+</head>
+<body>
+    <h1>Neuen Linedance hinzufügen</h1>
+    <form action="/add" method="POST">
+        <label for="song">Song:</label><br>
+        <input type="text" id="song" name="song"><br><br>
+
+        <label for="interpret">Interpret:</label><br>
+        <input type="text" id="interpret" name="interpret"><br><br>
+
+        <label for="dance">Dance:</label><br>
+        <input type="text" id="dance" name="dance"><br><br>
+
+        <label for="description">Beschreibung:</label><br>
+        <textarea id="description" name="description"></textarea><br><br>
+
+        <input type="submit" value="Hinzufügen">
+    </form>
+</body>
+</html>

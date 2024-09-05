@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linedance bearbeiten</title>
+</head>
+<body>
+    <h1>Linedance bearbeiten</h1>
+    <form action="/edit/{{ dance.id }}" method="POST">
+        <label for="song">Song:</label><br>
+        <input type="text" id="song" name="song" value="{{ dance.song }}"><br><br>
+
+        <label for="interpret">Interpret:</label><br>
+        <input type="text" id="interpret" name="interpret" value="{{ dance.interpret }}"><br><br>
+
+        <label for="dance">Dance:</label><br>
+        <input type="text" id="dance" name="dance" value="{{ dance.dance }}"><br><br>
+
+        <label for="description">Beschreibung:</label><br>
+        <textarea id="description" name="description">{{ dance.description }}</textarea><br><br>
+
+        <input type="submit" value="Speichern">
+    </form>
+</body>
+</html>

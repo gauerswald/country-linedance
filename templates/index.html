@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Linedance</title>
+</head>
+<body>
+    <h1>Country Linedances</h1>
+    <a href="/add">Neuen Linedance hinzufügen</a>
+    <ul>
+        {% for dance in linedances %}
+        <li>
+            <strong>{{ dance.song }} - {{ dance.interpret }}</strong> ({{ dance.dance }})
+            <br>{{ dance.description }}
+            <br>
+            <a href="/edit/{{ dance.id }}">Bearbeiten</a> |
+            <a href="/delete/{{ dance.id }}">Löschen</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
